@@ -1,0 +1,22 @@
+.completed{
+    color: grey;
+    text-decoration: line-through;
+}
+
+
+body {
+	background: #fff;
+	color: black;
+	font-family: Lato, sans-serif;
+	background-color: #fff;
+}
+
+.container {
+	display: block;
+	width: 400px;
+	margin: 10px auto 100px;
+	background-color:#f66;
+	padding:0px 10px 10px 10px;
+	border-radius:10px;
+   
+}

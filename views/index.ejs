@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>TúDu</title>
+</head>
+<body>
+    <div class="container">
+        <h1>TúDu</h1>
+        <p>One by one, get it done</p>
+
+        <h3>ADD ITEM</h3>
+        
+        <form action="/todo" method="POST">
+            <input type="text" placeholder="Add task" name="todo">
+            <button type="submit">Add</button>
+        </form>
+
+        <h3>TODO</h3>
+        <ul class="todos">
+            <% for(var i = 0; i < todos.length; i++) {%>
+            <% if(todos[i].completed === true){%>
+            <% } else{%>
+                <li class="todo task">
+                    <span class="task"><%= todos[i].todo %></span>
+                    <button class="task completed-task">Complete</button>
+                    <button class=" task delete-task">Delete</button>
+                </li>
+            <% } %>
+            <% } %>
+        </ul>
+
+        <h3>COMPLETED</h3>
+        <ul class="completed-tasks">
+            <% for(var i = 0; i < todos.length; i++) {%>
+                <% if(todos[i].completed === true){%>
+            <li>
+                    <span class='completed'><%= todos[i].todo %></span>
+                    <button class="undo-task">Undo</button>
+                    <button class="delete-task">Delete</button>
+            </li>
+                <% }else{%>
+                <% } %>
+            <% } %>
+        </ul> 
+    </div>
+<script src ="/main.js"></script>
+</body>
+</html>
+
+
+
